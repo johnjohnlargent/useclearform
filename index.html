@@ -177,3 +177,74 @@
         </div>
         <div class="card">
           <h3>Privacy Policies & Terms</h3>
+          <p>Compliant policies for websites, apps, and online platforms.</p>
+          <strong>From $99</strong>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>How It Works</h2>
+      <ol>
+        <li>Choose your service and fill out our short intake form</li>
+        <li>Submit payment via Stripe to confirm your order</li>
+        <li>We deliver your document via email within 2–3 business days</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Get Started</h2>
+      <form onsubmit="redirectToStripe(event)">
+        <input type="email" name="email" placeholder="Email address" required />
+        <select name="service" required>
+          <option value="">Select a service</option>
+          <option value="NDA Drafting - $49">NDA Drafting – $49</option>
+          <option value="Contract Template - $79">Contract Template – $79</option>
+          <option value="Privacy Policy & T&C - $99">Privacy Policy & Terms – $99</option>
+        </select>
+        <input type="text" name="business" placeholder="Your business name, industry, or personal name" />
+        <textarea name="details" rows="4" placeholder="Describe what you need (who is involved, purpose, any specific clauses)"></textarea>
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit">Submit & Continue to Payment</button>
+      </form>
+
+      <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">
+        After submitting the form, you'll be redirected to a Stripe payment link.<br/>
+        Once payment is received, you'll get a confirmation email.
+      </p>
+    </section>
+
+    <section style="background-color: #eaf4ff; padding: 40px 20px; border-radius: 16px;">
+      <h2>Latest Reviews</h2>
+      <div class="grid">
+        <div class="card" style="display: flex; gap: 12px; align-items: center;">
+          <img src="https://i.pravatar.cc/60?img=32" alt="Melissa" style="border-radius: 50%; width: 50px; height: 50px;" />
+          <div>
+            <p>“Super fast turnaround and exactly what I needed.”</p>
+            <strong>– Melissa T.</strong>
+          </div>
+        </div>
+        <div class="card" style="display: flex; gap: 12px; align-items: center;">
+          <img src="https://i.pravatar.cc/60?img=58" alt="Victor" style="border-radius: 50%; width: 50px; height: 50px;" />
+          <div>
+            <p>“Customer support was surprisingly good. Felt personal.”</p>
+            <strong>– Victor D.</strong>
+          </div>
+        </div>
+        <div class="card" style="display: flex; gap: 12px; align-items: center;">
+          <img src="https://i.pravatar.cc/60?img=57" alt="Priya" style="border-radius: 50%; width: 50px; height: 50px;" />
+          <div>
+            <p>“I’ve used Clearform twice now. Always smooth and quick.”</p>
+            <strong>– Priya M.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Clearform © 2025. All rights reserved.</p>
+      <p>Disclaimer: We do not provide legal advice. Our services are for informational and business purposes only.</p>
+    </footer>
+  </div>
+</body>
+</html>
