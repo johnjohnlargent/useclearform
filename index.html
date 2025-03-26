@@ -71,6 +71,11 @@
       flex: 1 1 calc(33% - 20px);
     }
 
+    .form-wrapper {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
     form input, form textarea, form select {
       width: 100%;
       padding: 12px;
@@ -79,6 +84,7 @@
       border: 1px solid #cbd5e1;
       background: #fff;
       font-size: 1rem;
+      box-sizing: border-box;
     }
 
     form button {
@@ -194,19 +200,21 @@
 
     <section>
       <h2>Get Started</h2>
-      <form onsubmit="redirectToStripe(event)">
-        <input type="email" name="email" placeholder="Email address" required />
-        <select name="service" required>
-          <option value="">Select a service</option>
-          <option value="NDA Drafting - $49">NDA Drafting – $49</option>
-          <option value="Contract Template - $79">Contract Template – $79</option>
-          <option value="Privacy Policy & T&C - $99">Privacy Policy & Terms – $99</option>
-        </select>
-        <input type="text" name="business" placeholder="Your business name, industry, or personal name" />
-        <textarea name="details" rows="4" placeholder="Describe what you need (who is involved, purpose, any specific clauses)"></textarea>
-        <input type="text" name="_gotcha" style="display:none">
-        <button type="submit">Submit & Continue to Payment</button>
-      </form>
+      <div class="form-wrapper">
+        <form onsubmit="redirectToStripe(event)">
+          <input type="email" name="email" placeholder="Email address" required />
+          <select name="service" required>
+            <option value="">Select a service</option>
+            <option value="NDA Drafting - $49">NDA Drafting – $49</option>
+            <option value="Contract Template - $79">Contract Template – $79</option>
+            <option value="Privacy Policy & T&C - $99">Privacy Policy & Terms – $99</option>
+          </select>
+          <input type="text" name="business" placeholder="Your business name, industry, or personal name" />
+          <textarea name="details" rows="4" placeholder="Describe what you need (who is involved, purpose, any specific clauses)"></textarea>
+          <input type="text" name="_gotcha" style="display:none">
+          <button type="submit">Submit & Continue to Payment</button>
+        </form>
+      </div>
 
       <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">
         After submitting the form, you'll be redirected to a Stripe payment link.<br/>
