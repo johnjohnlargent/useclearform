@@ -90,6 +90,31 @@
       background: linear-gradient(to right, #2563eb, #1e3a8a);
     }
 
+    form input, form textarea {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #3b82f6;
+    }
+
     footer {
       font-size: 0.9rem;
       text-align: center;
@@ -122,6 +147,26 @@
       color: #1e3a8a;
       font-weight: 500;
     }
+
+    .about-section {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 60px 20px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .about-section h2 {
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
   </style>
 </head>
 <body>
@@ -142,21 +187,26 @@
       <div class="grid">
         <div class="card">
           <h3>Solo Starter Pack</h3>
-          <p>Includes NDA + Contractor Agreement + Services Contract. Perfect for freelancers and consultants.</p>
+          <p>Includes: Non-Disclosure Agreement (NDA), Independent Contractor Agreement, and General Services Contract.<br>
+          Perfect for freelancers, consultants, or anyone starting solo.</p>
           <strong>$89 CAD</strong><br>
-          <a href="#" class="button">Buy Now</a>
+          <a href="https://buy.stripe.com/eVadUufvo5Ap0q4003" class="button">Buy Now</a>
         </div>
+
         <div class="card">
           <h3>Web Legal Essentials</h3>
-          <p>Privacy Policy + Terms of Use for websites, apps, and online services.</p>
+          <p>Includes: Website Privacy Policy and Terms of Use.<br>
+          Designed for anyone launching a website, online platform, or app.</p>
           <strong>$99 CAD</strong><br>
-          <a href="#" class="button">Buy Now</a>
+          <a href="https://buy.stripe.com/3cs4jU82WfaZegUcMQ" class="button">Buy Now</a>
         </div>
+
         <div class="card">
           <h3>Freelancer Pro Kit</h3>
-          <p>Everything you need to legally protect your freelance work.</p>
+          <p>Includes: NDA, Freelance Contract, Invoice Terms Sheet, and Legal Checklist.<br>
+          A robust legal toolkit for professional freelancers to operate with clarity and protection.</p>
           <strong>$129 CAD</strong><br>
-          <a href="#" class="button">Buy Now</a>
+          <a href="https://buy.stripe.com/9AQcQq3MGgf32yc5kp" class="button">Buy Now</a>
         </div>
       </div>
     </section>
@@ -164,6 +214,15 @@
     <section>
       <h2>Custom Services</h2>
       <p>At this time, we are not offering custom document drafting or intake-based services. Please check back soon!</p>
+    </section>
+
+    <section>
+      <h2>Share Your Experience</h2>
+      <form action="https://formspree.io/f/xwplbzgz" method="POST">
+        <input type="email" name="email" placeholder="Your email address" required />
+        <textarea name="message" rows="3" placeholder="Leave your review..." required></textarea>
+        <button type="submit">Submit Review</button>
+      </form>
     </section>
 
     <section style="background-color: #eaf4ff; padding: 40px 20px; border-radius: 16px;">
@@ -191,6 +250,11 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="about-section">
+      <h2>About Us</h2>
+      <p>Clearform is a modern legal resource built to empower startups, freelancers, and digital entrepreneurs with reliable, accessible legal documentation. We simplify legal processes so you can focus on building your business with peace of mind.</p>
     </section>
 
     <footer>
